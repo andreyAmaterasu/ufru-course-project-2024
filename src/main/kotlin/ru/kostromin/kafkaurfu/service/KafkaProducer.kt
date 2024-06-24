@@ -8,6 +8,6 @@ import ru.kostromin.kafkaurfu.config.AppConstants
 class KafkaProducer(val kafkaTemplate: KafkaTemplate<String, String>) {
 
     fun sendEvent(message: String) {
-        kafkaTemplate.send(AppConstants.TOPIC_NAME,message)
+        kafkaTemplate.send(AppConstants.TOPIC_NAME, message)
     }
 }

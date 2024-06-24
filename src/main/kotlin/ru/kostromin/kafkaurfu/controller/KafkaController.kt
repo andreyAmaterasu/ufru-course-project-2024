@@ -10,7 +10,7 @@ import ru.kostromin.kafkaurfu.service.KafkaProducer
 @RestController
 class KafkaController(val kafkaProducer: KafkaProducer) {
 
-    @GetMapping("/event")
+    @GetMapping("/send")
     fun sendKafkaEvent(@RequestParam("msg") msg: String): ResponseEntity<String> {
 
         kafkaProducer.sendEvent(msg)
